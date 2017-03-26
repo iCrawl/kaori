@@ -1,7 +1,7 @@
 {
   "name": "kaori",
   "version": "1.0.0",
-  "description": ".",
+  "description": "Your friendly neighbourhood violinist bringing you the best booru images",
   "license": "MIT",
   "author": {
     "name": "Crawl",
@@ -17,7 +17,19 @@
   "bugs": {
     "url": "https://github.com/iCrawl/kaori/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "booru",
+    "danbooru",
+    "konachan",
+    "yandere",
+    "gelbooru",
+    "rule34",
+    "safebooru",
+    "tbib",
+    "xbooru",
+    "youhateus",
+    "lolibooru"
+  ],
   "homepage": "https://github.com/iCrawl/kaori#readme",
   "dependencies": {
     "node-fetch": "^1.6.3",
