@@ -1,0 +1,7 @@
+{
+	"e621.net": {
+		"aliases": ["e6","e621"],
+		"endpoint": "/post/index.json?",
+		"random": true
+	}
+}

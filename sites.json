@@ -1,0 +1,57 @@
+{
+	"danbooru.donmai.us": {
+		"aliases": ["danbooru"],
+		"endpoint": "/posts.json?",
+		"random": true
+	},
+	"konachan.com": {
+		"aliases": ["konachan"],
+		"endpoint": "/post.json?",
+		"random": true
+	},
+	"konachan.net": {
+		"aliases": ["konachannet"],
+		"endpoint": "/post.json?",
+		"random": true
+	},
+	"yande.re": {
+		"aliases": ["yandere"],
+		"endpoint": "/post.json?",
+		"random": true
+	},
+	"lolibooru.moe": {
+		"aliases": ["loli", "lolibooru"],
+		"endpoint": "/post/index.json?",
+		"random": true
+	},
+	"gelbooru.com": {
+		"aliases": ["gelbooru"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	},
+	"rule34.xxx": {
+		"aliases": ["r34","rule34"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	},
+	"safebooru.org": {
+		"aliases": ["safebooru"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	},
+	"tbib.org": {
+		"aliases": ["tbib"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	},
+	"xbooru.com": {
+		"aliases": ["xbooru"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	},
+	"youhate.us": {
+		"aliases": ["youhateus"],
+		"endpoint": "/index.php?page=dapi&s=post&q=index&",
+		"random": false
+	}
+}
