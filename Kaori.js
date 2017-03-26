@@ -4,6 +4,7 @@ const { Parser } = require('xml2js');
 const parser = new Parser();
 
 const sites = require('./sites');
+const { version } = require('./package');
 
 class Kaori {
 	constructor(customSites = {}) {
@@ -34,7 +35,8 @@ class Kaori {
 	_searchPosts(site, { tags, limit, random }) {
 		return new Promise((resolve, reject) => {
 			const endpoint = this.sites[site].endpoint;
-			const options = { headers: { 'User-Agent': 'Kaori, an npm module for boorus.' } };
+			const userAgent = `Kaori, a npm module for boorus. v${version} (https://github.com/iCrawl/Kaori/)`;
+			const options = { headers: { 'User-Agent': userAgent } };
 			if (!random) {
 				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options)
 					.then(res => {
