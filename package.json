@@ -2,6 +2,7 @@
   "name": "kaori",
   "version": "1.0.3",
   "description": "Your friendly neighbourhood violinist bringing you the best booru images",
+  "main": "src/index.js",
   "license": "MIT",
   "author": {
     "name": "Crawl",
