@@ -1,6 +1,6 @@
 {
   "name": "kaori",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Your friendly neighbourhood violinist bringing you the best booru images",
   "main": "src/index.js",
   "license": "MIT",
