@@ -4,7 +4,7 @@ const { Parser } = require('xml2js');
 const parser = new Parser();
 
 const sites = require('./sites');
-const { version } = require('./package');
+const { version } = require('../package');
 
 class Kaori {
 	constructor(customSites = {}) {
