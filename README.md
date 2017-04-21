@@ -30,7 +30,7 @@ npm install --save kaori
 #### Normal usage:
 
 ```js
-const Kaori = require('../index');
+const Kaori = require('kaori');
 const kaori = new Kaori();
 
 kaori.search('danbooru', { tags: ['cat'], limit: 1, random: true })
@@ -41,7 +41,7 @@ kaori.search('danbooru', { tags: ['cat'], limit: 1, random: true })
 #### But you can also append your own sites to the already preexisting ones, as shown in the examples folder, as follows:
 
 ```js
-const Kaori = require('../index');
+const Kaori = require('kaori');
 
 const moreSites = require('./moreSites');
 
