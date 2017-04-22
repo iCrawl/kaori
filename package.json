@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-aqua": "^1.1.0"
+    "eslint-config-aqua": "^1.2.0"
   },
   "eslintConfig": {
     "extends": "aqua"
