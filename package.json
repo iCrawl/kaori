@@ -3,11 +3,11 @@
   "version": "1.0.7",
   "description": "Your friendly neighbourhood violinist bringing you the best booru images",
   "main": "src/index.js",
-  "license": "MIT",
   "author": {
     "name": "Crawl",
     "email": "icrawltogo@gmail.com"
   },
+  "license": "MIT",
   "scripts": {
     "test": "eslint . silent"
   },
