@@ -16,5 +16,7 @@ build/Release
 node_modules
 
 examples
+.gitattributes
 .gitignore
+.travis.yml
 yarn.lock
