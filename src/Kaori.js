@@ -99,7 +99,7 @@ class Kaori {
 			for (const image of Object.keys(images)) {
 				const key = images[image];
 				key.common = {
-					fileURL: key.file_url.startsWith('/data')
+					fileURL: key.file_url.startsWith('/data') || key.file_url.startsWith('/cached')
 						? `https://danbooru.donmai.us${key.file_url}`
 						: !key.file_url.startsWith('http')
 							? `https:${key.file_url}`
