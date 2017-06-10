@@ -33,12 +33,12 @@
   ],
   "homepage": "https://github.com/iCrawl/kaori#readme",
   "dependencies": {
-    "node-fetch": "^1.6.3",
+    "node-fetch": "^1.7.1",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-aqua": "^1.2.0"
+    "eslint-config-aqua": "^1.2.1"
   },
   "eslintConfig": {
     "extends": "aqua"
