@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { URL } = require('url');
+const url = require('url');
 const { Parser } = require('xml2js');
 const parser = new Parser();
 
@@ -104,7 +104,7 @@ class Kaori {
 						? `https://danbooru.donmai.us${key.file_url}`
 						: !key.file_url.startsWith('http')
 							? `https:${key.file_url}`
-							: new URL(key.file_url).href,
+							: url.parse(key.file_url).href,
 					id: key.id.toString(),
 					tags: typeof key.tags !== 'undefined'
 						? key.tags.split(' ').filter(val => val !== '')
