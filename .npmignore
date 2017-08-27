@@ -16,6 +16,7 @@ build/Release
 node_modules
 
 examples
+.vscode
 .gitattributes
 .gitignore
 .travis.yml
