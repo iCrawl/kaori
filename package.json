@@ -9,7 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "eslint ."
+    "pretest": "eslint src",
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,8 @@
   },
   "devDependencies": {
     "eslint": "^4.5.0",
-    "eslint-config-aqua": "^2.0.0"
+    "eslint-config-aqua": "^2.0.0",
+    "jest": "^20.0.4"
   },
   "eslintConfig": {
     "extends": "aqua"
