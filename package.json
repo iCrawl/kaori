@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "eslint . silent"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -33,12 +33,12 @@
   ],
   "homepage": "https://github.com/iCrawl/kaori#readme",
   "dependencies": {
-    "node-fetch": "^1.7.1",
-    "xml2js": "^0.4.17"
+    "node-fetch": "^1.7.2",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-aqua": "^1.2.1"
+    "eslint": "^4.5.0",
+    "eslint-config-aqua": "^2.0.0"
   },
   "eslintConfig": {
     "extends": "aqua"
