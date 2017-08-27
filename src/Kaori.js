@@ -96,10 +96,11 @@ class Kaori {
 	_common(images) {
 		return new Promise(resolve => {
 			if (images === []) return resolve([]);
+			images = images.filter(image => image.hasOwnProperty('file_url') || image.hasOwnProperty('image'));
 			for (const image of Object.keys(images)) {
 				const key = images[image];
 				key.common = {
-					fileURL: key.file_url.startsWith('/data') || key.file_url.startsWith('/cached')
+					fileURL: key.file_url.startsWith('/data') || key.file_url.startsWith('/cached') || key.image
 						? `https://danbooru.donmai.us${key.file_url}`
 						: !key.file_url.startsWith('http')
 							? `https:${key.file_url}`
@@ -108,9 +109,9 @@ class Kaori {
 					tags: typeof key.tags !== 'undefined'
 						? key.tags.split(' ').filter(val => val !== '')
 						: key.tag_string.split(' ').filter(val => val !== ''),
-					score: parseInt(key.score),
-					source: key.source,
-					rating: key.rating
+					score: parseInt(key.score) || null,
+					source: key.source || null,
+					rating: key.rating || null
 				};
 			}
 			return resolve(images);
