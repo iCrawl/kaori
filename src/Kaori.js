@@ -34,37 +34,37 @@ class Kaori {
 
 	_searchPosts(site, { tags, limit, random }) {
 		return new Promise((resolve, reject) => {
-			const endpoint = this.sites[site].endpoint;
+			const { endpoint } = this.sites[site];
 			const userAgent = `Kaori, a npm module for boorus. v${version} (https://github.com/iCrawl/Kaori/)`;
 			const options = { headers: { 'User-Agent': userAgent } };
 			if (!random) {
 				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options)
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
-						if (contentType.includes('text/xml')) return this._xml2json(res.text());
+						if (contentType.includes('text/xml')) return res.text();
 						else return res.json();
 					})
 					.then(images => resolve(this._commonify(images)))
-					.catch(err => reject(new Error(`Couldn't fetch the api. ${err}`)));
+					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 			} else if (random && sites[site].random) {
 				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}+order:random&limit=${limit}`, options)
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
-						if (contentType.includes('text/xml')) return this._xml2json(res.text());
+						if (contentType.includes('text/xml')) return res.text();
 						else return res.json();
 					})
 					.then(images => resolve(this._commonify(images)))
-					.catch(err => reject(new Error(`Couldn't fetch the api. ${err}`)));
+					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 			} else {
 				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}&limit=100`, options)
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
-						if (contentType.includes('text/xml')) return this._xml2json(res.text());
+						if (contentType.includes('text/xml')) return res.text();
 						else return res.json();
 					})
-					.then(parsed => this._shuffle(parsed))
-					.then(shuffled => resolve(this._commonify(shuffled)))
-					.catch(err => reject(new Error(`Couldn't fetch the api. ${err}`)));
+					.then(parsed => resolve(this._commonify(parsed)))
+					.then(shuffled => this._shuffle(shuffled))
+					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 			}
 		});
 	}
