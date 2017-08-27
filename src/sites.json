@@ -29,6 +29,11 @@
 		"endpoint": "/index.php?page=dapi&s=post&q=index&",
 		"random": false
 	},
+	"gelbooru.com/index.php": {
+		"aliases": ["gelbooru-json"],
+		"endpoint": "?page=dapi&s=post&q=index&json=1&",
+		"random": false
+	},
 	"rule34.xxx": {
 		"aliases": ["r34","rule34"],
 		"endpoint": "/index.php?page=dapi&s=post&q=index&",
