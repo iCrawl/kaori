@@ -62,8 +62,8 @@ class Kaori {
 						if (contentType.includes('text/xml')) return res.text();
 						else return res.json();
 					})
-					.then(parsed => resolve(this._commonify(parsed)))
-					.then(shuffled => this._shuffle(shuffled))
+					.then(parsed => this._commonify(parsed))
+					.then(shuffled => resolve(this._shuffle(shuffled)))
 					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 			}
 		});
@@ -119,6 +119,7 @@ class Kaori {
 	}
 
 	_shuffle(array) {
+		array = array.slice();
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			const temp = array[i];
