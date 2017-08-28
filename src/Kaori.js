@@ -46,7 +46,7 @@ class Kaori {
 					})
 					.then(images => resolve(this._commonify(images)))
 					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
-			} else if (random && sites[site].random) {
+			} else if (random && this.sites[site].random) {
 				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}+order:random&limit=${limit}`, options)
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
