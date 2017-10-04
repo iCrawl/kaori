@@ -18,6 +18,8 @@ pids
 *.bak
 
 # Miscellaneous
+examples/
+test/
 .tmp/
 .gitattributes
 .gitignore
