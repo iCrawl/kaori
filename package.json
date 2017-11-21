@@ -1,51 +1,51 @@
 {
-  "name": "kaori",
-  "version": "1.1.4",
-  "description": "Your friendly neighbourhood violinist bringing you the best booru images",
-  "main": "src/index.js",
-  "author": {
-    "name": "Crawl",
-    "email": "icrawltogo@gmail.com"
-  },
-  "license": "MIT",
-  "scripts": {
-    "pretest": "eslint src",
-    "test": "jest --verbose"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iCrawl/kaori.git"
-  },
-  "bugs": {
-    "url": "https://github.com/iCrawl/kaori/issues"
-  },
-  "keywords": [
-    "booru",
-    "danbooru",
-    "konachan",
-    "yandere",
-    "gelbooru",
-    "rule34",
-    "safebooru",
-    "tbib",
-    "xbooru",
-    "youhateus",
-    "lolibooru"
-  ],
-  "homepage": "https://github.com/iCrawl/kaori#readme",
-  "dependencies": {
-    "node-fetch": "^2.0.0-alpha.9",
-    "xml2js": "^0.4.19"
-  },
-  "devDependencies": {
-    "eslint": "^4.10.0",
-    "eslint-config-aqua": "^2.0.1",
-    "jest": "^21.2.1"
-  },
-  "eslintConfig": {
-    "extends": "aqua"
-  },
-  "engines": {
-    "node": ">=6"
-  }
+	"name": "kaori",
+	"version": "1.1.4",
+	"description": "Your friendly neighbourhood violinist bringing you the best booru images",
+	"main": "src/index.js",
+	"author": {
+		"name": "Crawl",
+		"email": "icrawltogo@gmail.com"
+	},
+	"license": "MIT",
+	"scripts": {
+		"pretest": "eslint src",
+		"test": "jest --verbose"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iCrawl/kaori.git"
+	},
+	"bugs": {
+		"url": "https://github.com/iCrawl/kaori/issues"
+	},
+	"keywords": [
+		"booru",
+		"danbooru",
+		"konachan",
+		"yandere",
+		"gelbooru",
+		"rule34",
+		"safebooru",
+		"tbib",
+		"xbooru",
+		"youhateus",
+		"lolibooru"
+	],
+	"homepage": "https://github.com/iCrawl/kaori#readme",
+	"dependencies": {
+		"node-fetch": "^2.0.0-alpha.9",
+		"xml2js": "^0.4.19"
+	},
+	"devDependencies": {
+		"eslint": "^4.11.0",
+		"eslint-config-aqua": "^2.0.1",
+		"jest": "^21.2.1"
+	},
+	"eslintConfig": {
+		"extends": "aqua"
+	},
+	"engines": {
+		"node": ">=6"
+	}
 }

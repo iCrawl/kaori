@@ -11,4 +11,8 @@ node_js:
   - '6'
   - '7'
   - '8'
-install: npm install
+  - '9'
+cache:
+  yarn: true
+script:
+  - yarn test
