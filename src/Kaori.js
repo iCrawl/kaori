@@ -27,7 +27,7 @@ class Kaori {
 			if (typeof limit !== 'number' && !Number.isNaN(limit)) return reject(new Error('Limit has to be a number.'));
 
 			site = this._resolveSite(site);
-			limit = parseInt(limit);
+			limit = parseInt(limit, 10);
 			return resolve(this._searchPosts(site, { tags, limit, random }));
 		});
 	}
@@ -42,7 +42,7 @@ class Kaori {
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
 						if (contentType.includes('text/xml')) return res.text();
-						else return res.json();
+						return res.json();
 					})
 					.then(images => resolve(this._commonify(images)))
 					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
@@ -51,21 +51,21 @@ class Kaori {
 					.then(res => {
 						const contentType = res.headers.get('content-type').split(';');
 						if (contentType.includes('text/xml')) return res.text();
-						else return res.json();
+						return res.json();
 					})
 					.then(images => resolve(this._commonify(images)))
 					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
-			} else {
-				return fetch(`http://${site}${endpoint}tags=${tags.join('+')}&limit=100`, options)
-					.then(res => {
-						const contentType = res.headers.get('content-type').split(';');
-						if (contentType.includes('text/xml')) return res.text();
-						else return res.json();
-					})
-					.then(parsed => this._commonify(parsed))
-					.then(shuffled => resolve(this._shuffle(shuffled)))
-					.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 			}
+
+			return fetch(`http://${site}${endpoint}tags=${tags.join('+')}&limit=100`, options)
+				.then(res => {
+					const contentType = res.headers.get('content-type').split(';');
+					if (contentType.includes('text/xml')) return res.text();
+					return res.json();
+				})
+				.then(parsed => this._commonify(parsed))
+				.then(shuffled => resolve(this._shuffle(shuffled)))
+				.catch(err => reject(new Error(`Couldn't fetch the API: ${err}`)));
 		});
 	}
 
@@ -85,11 +85,11 @@ class Kaori {
 				return parser.parseString(images, (err, res) => {
 					if (err) return reject(new Error(err));
 					if (typeof res.posts.post === 'undefined') return resolve([]);
-					else return resolve(res.posts.post.map(val => val.$));
+					return resolve(res.posts.post.map(val => val.$));
 				});
-			} else {
-				return resolve(images);
 			}
+
+			return resolve(images);
 		});
 	}
 
@@ -102,14 +102,14 @@ class Kaori {
 				key.common = {
 					fileURL: key.file_url.startsWith('/data') || key.file_url.startsWith('/cached') || key.image
 						? `https://danbooru.donmai.us${key.file_url}`
-						: !key.file_url.startsWith('http')
-							? `https:${key.file_url}`
-							: url.parse(key.file_url).href,
+						: key.file_url.startsWith('http')
+							? url.parse(key.file_url).href
+							: `https:${key.file_url}`,
 					id: key.id.toString(),
-					tags: typeof key.tags !== 'undefined'
-						? key.tags.split(' ').filter(val => val !== '')
-						: key.tag_string.split(' ').filter(val => val !== ''),
-					score: parseInt(key.score) || null,
+					tags: typeof key.tags === 'undefined'
+						? key.tag_string.split(' ').filter(val => val !== '')
+						: key.tags.split(' ').filter(val => val !== ''),
+					score: parseInt(key.score, 10) || null,
 					source: key.source || null,
 					rating: key.rating || null
 				};
