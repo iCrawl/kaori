@@ -1,4 +1,4 @@
-# kaori
+# Kaori
 > Your friendly neighbourhood violinist bringing you the best booru images
 
 <div align="center">
@@ -42,7 +42,7 @@ npm install --save kaori
 
 ## Author
 
-**kaori** © [iCrawl](https://github.com/iCrawl), Released under the [MIT](https://github.com/iCrawl/kaori/blob/master/LICENSE) License.<br>
+**Kaori** © [iCrawl](https://github.com/iCrawl), Released under the [MIT](https://github.com/iCrawl/kaori/blob/master/LICENSE) License.  
 Authored and maintained by iCrawl.
 
 > GitHub [@iCrawl](https://github.com/iCrawl) · Twitter [@iCrawlToGo](https://twitter.com/iCrawlToGo)
