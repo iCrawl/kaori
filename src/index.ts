@@ -33,7 +33,7 @@ function resolveSite(resolvable: string): string | null {
 export default async function search(
 	site: string,
 	{ tags = [], limit = 1, random = false }: SearchRequest
-): Promise<any> {
+): Promise<Image[]> {
 	if (!Array.isArray(tags)) throw new Error('Tags have to be an array.');
 	if (typeof limit !== 'number' && !Number.isNaN(limit)) throw new Error('Limit has to be a number.');
 	const s = resolveSite(site);
