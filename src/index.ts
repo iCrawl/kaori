@@ -1,6 +1,10 @@
 import fetch from 'node-fetch';
 import sites from './sites';
 
+import Image from './Image';
+
+const VERSION = 2;
+
 interface SearchRequest {
 	tags: string[];
 	limit: number;
@@ -30,15 +34,21 @@ export default async function search(
 	site: string,
 	{ tags = [], limit = 1, random = false }: SearchRequest
 ): Promise<any> {
+	if (!Array.isArray(tags)) throw new Error('Tags have to be an array.');
+	if (typeof limit !== 'number' && !Number.isNaN(limit)) throw new Error('Limit has to be a number.');
 	const s = resolveSite(site);
-	const { endpoint, random: rand } = (sites as Sites)[s!];
+	if (!s) throw new Error('This site is not supported.');
+	const { endpoint, random: rand } = (sites as Sites)[s];
 	if (random) {
 		if (rand) tags.push('order:random');
 	}
 
 	try {
-		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${limit}`);
-		return res.json();
+		const userAgent = `Kaori, a npm module for boorus. v${VERSION} (https://github.com/iCrawl/kaori/)`;
+		const options = { headers: { 'User-Agent': userAgent } };
+		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options);
+		const json = await res.json();
+		return json.map((image: any) => new Image(image, s));
 	} catch (error) {
 		throw error;
 	}
