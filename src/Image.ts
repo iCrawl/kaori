@@ -1,4 +1,4 @@
-export default class Image {
+export class Image {
 	public id: number;
 	public tags: string[];
 	public createdAt?: Date;

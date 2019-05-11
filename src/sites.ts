@@ -1,4 +1,4 @@
-export default {
+export const sites = {
 	'danbooru.donmai.us': {
 		aliases: ['danbooru'],
 		nsfw: true,

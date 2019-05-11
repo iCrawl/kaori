@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
-import sites from './sites';
+import { sites } from './sites';
 
-import Image from './Image';
+import { Image } from './Image';
 
 const VERSION = 2;
 
@@ -30,7 +30,7 @@ function resolveSite(resolvable: string): string | null {
 }
 
 
-export default async function search(
+export async function search(
 	site: string,
 	{ tags = [], limit = 1, random = false }: SearchRequest
 ): Promise<Image[]> {
@@ -43,9 +43,10 @@ export default async function search(
 		if (rand) tags.push('order:random');
 	}
 
+	const userAgent = `Kaori, a npm module for boorus. v${VERSION} (https://github.com/iCrawl/kaori/)`;
+	const options = { headers: { 'User-Agent': userAgent } };
+
 	try {
-		const userAgent = `Kaori, a npm module for boorus. v${VERSION} (https://github.com/iCrawl/kaori/)`;
-		const options = { headers: { 'User-Agent': userAgent } };
 		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options);
 		const json = await res.json();
 		return json.map((image: any) => new Image(image, s));
