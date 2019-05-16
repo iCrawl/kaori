@@ -32,7 +32,7 @@ function resolveSite(resolvable: string): string | null {
 
 export async function search(
 	site: string,
-	{ tags = [], limit = 1, random = false }: SearchRequest
+	{ tags = [], limit = 1, random = false }: SearchRequest = { tags: [], limit: 1, random: false }
 ): Promise<Image[]> {
 	if (!Array.isArray(tags)) throw new Error('Tags have to be an array.');
 	if (typeof limit !== 'number' && !Number.isNaN(limit)) throw new Error('Limit has to be a number.');
@@ -49,6 +49,7 @@ export async function search(
 	try {
 		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options);
 		const json = await res.json();
+		if ('success' in json && !json.success) throw new Error(json.message);
 		return json.map((image: any) => new Image(image, s));
 	} catch (error) {
 		throw error;
