@@ -7,6 +7,7 @@ const VERSION = 2;
 
 interface SearchRequest {
 	tags: string[];
+	exclude: string[];
 	limit: number;
 	random: boolean;
 }
@@ -32,7 +33,7 @@ function resolveSite(resolvable: string): string | null {
 
 export async function search(
 	site: string,
-	{ tags = [], limit = 1, random = false }: SearchRequest = { tags: [], limit: 1, random: false }
+	{ tags = [], exclude = [], limit = 1, random = false }: SearchRequest = { tags: [], exclude: [], limit: 1, random: false }
 ): Promise<Image[]> {
 	if (!Array.isArray(tags)) throw new Error('Tags have to be an array.');
 	if (typeof limit !== 'number' && !Number.isNaN(limit)) throw new Error('Limit has to be a number.');
@@ -50,7 +51,12 @@ export async function search(
 		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${limit}`, options);
 		const json = await res.json();
 		if ('success' in json && !json.success) throw new Error(json.message);
-		return json.map((image: any) => new Image(image, s));
+		const images: Image[] = json.map((image: any) => new Image(image, s));
+		if (exclude.length) {
+			const left = images.filter(image => image.tags.every(tag => !exclude.includes(tag)));
+			return left;
+		}
+		return images;
 	} catch (error) {
 		throw error;
 	}

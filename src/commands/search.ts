@@ -1,5 +1,6 @@
 import { CommandModule, Argv, Arguments } from 'yargs';
 import { search } from '../index';
+import { Image } from '../Image';
 
 export class SearchCommand implements CommandModule {
 	public command = 'search <site>';
@@ -10,6 +11,12 @@ export class SearchCommand implements CommandModule {
 			.option('t', {
 				'alias': 'tags',
 				'describe': 'The tags to search for',
+				'type': 'array',
+				'default': []
+			})
+			.option('e', {
+				'alias': 'exclude',
+				'describe': 'The tags to exclude',
 				'type': 'array',
 				'default': []
 			})
@@ -29,9 +36,10 @@ export class SearchCommand implements CommandModule {
 	public async handler(args: Arguments): Promise<void> {
 		const site = args.site as string;
 		const tags = args.tags as string[];
+		const exclude = args.exclude as string[];
 		const limit = args.limit as number;
 		const random = args.random as boolean;
-		const s = await search(site, { tags, limit, random });
-		console.log(s.map(image => image.fileURL).join('\n'));
+		const s = await search(site, { tags, exclude, limit, random });
+		console.log(s.map(async (image: Image) => image.fileURL).join('\n'));
 	}
 }
