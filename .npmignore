@@ -11,16 +11,15 @@ pids
 *.pid
 *.seed
 
-# IDE
-.vscode/bookmarks.json
-
 # Test files
-*.bak
+test/
 
 # Miscellaneous
-examples/
-test/
 .tmp/
 .gitattributes
 .gitignore
-.travis.yml
+.yarnclean
+gulpfile.js
+jest.config.js
+tsconfig.json
+src/

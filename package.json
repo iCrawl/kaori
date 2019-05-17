@@ -1,16 +1,17 @@
 {
 	"name": "kaori",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"description": "Your friendly neighbourhood violinist bringing you the best booru images",
-	"main": "src/index.js",
-	"author": {
-		"name": "Crawl",
-		"email": "icrawltogo@gmail.com"
-	},
+	"main": "dist/index.js",
+	"bin": "dist/cli.js",
+	"author": "iCrawl <icrawltogo@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"pretest": "eslint src",
-		"test": "jest --verbose"
+		"prebuild": "yarn lint",
+		"build": "gulp",
+		"lint": "eslint src --ext .ts",
+		"pretest": "yarn lint",
+		"test": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -34,18 +35,33 @@
 	],
 	"homepage": "https://github.com/iCrawl/kaori#readme",
 	"dependencies": {
-		"node-fetch": "^2.2.0",
-		"xml2js": "^0.4.19"
+		"fast-xml-parser": "^3.12.16",
+		"node-fetch": "^2.6.0",
+		"yargs": "^13.2.4"
 	},
 	"devDependencies": {
-		"eslint": "^5.6.0",
-		"eslint-config-aqua": "^4.4.1",
-		"jest": "^23.6.0"
+		"@types/jest": "^24.0.13",
+		"@types/node": "^12.0.2",
+		"@types/node-fetch": "^2.3.4",
+		"@types/yargs": "^13.0.0",
+		"@typescript-eslint/eslint-plugin": "^1.9.0",
+		"@typescript-eslint/parser": "^1.9.0",
+		"eslint": "^5.16.0",
+		"eslint-config-marine": "^2.2.0",
+		"fs-nextra": "^0.4.5",
+		"gulp": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-typescript": "^5.0.1",
+		"jest": "^24.8.0",
+		"jest-extended": "^0.11.1",
+		"merge2": "^1.2.3",
+		"ts-jest": "^24.0.2",
+		"typescript": "^3.4.5"
 	},
 	"eslintConfig": {
-		"extends": "aqua/node"
-	},
-	"engines": {
-		"node": ">=6"
+		"extends": "marine/node",
+		"env": {
+			"jest": true
+		}
 	}
 }
