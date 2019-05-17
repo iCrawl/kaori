@@ -40,6 +40,6 @@ export class SearchCommand implements CommandModule {
 		const limit = args.limit as number;
 		const random = args.random as boolean;
 		const s = await search(site, { tags, exclude, limit, random });
-		console.log(s.map(async (image: Image) => image.fileURL).join('\n'));
+		console.log(s.map((image: Image) => image.fileURL).join('\n'));
 	}
 }
