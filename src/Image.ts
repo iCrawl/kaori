@@ -29,7 +29,7 @@ export class Image {
 				: new Date(data.created_at)
 			: undefined;
 		this.source = data.source;
-		this.score = data.score;
+		this.score = parseInt(data.score, 10);
 
 		this.fileURL = data.file_url
 			? data.file_url.match(/https?:\/\/lolibooru.moe/)

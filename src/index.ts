@@ -6,10 +6,10 @@ import { Image } from './Image';
 const VERSION = 2;
 
 interface SearchRequest {
-	tags: string[];
-	exclude: string[];
-	limit: number;
-	random: boolean;
+	tags?: string[];
+	exclude?: string[];
+	limit?: number;
+	random?: boolean;
 }
 
 interface Sites {
