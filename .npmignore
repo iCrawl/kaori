@@ -1,0 +1,25 @@
+# Packages
+node_modules/
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Test files
+test/
+
+# Miscellaneous
+.tmp/
+.gitattributes
+.gitignore
+.yarnclean
+gulpfile.js
+jest.config.js
+tsconfig.json
+src/
