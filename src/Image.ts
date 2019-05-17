@@ -16,7 +16,6 @@ export class Image {
 	private site: string;
 
 	public constructor(data: any, site: string) {
-		this.data = data;
 		this.site = site;
 
 		this.id = data.id;
