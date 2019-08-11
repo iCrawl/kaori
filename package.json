@@ -35,28 +35,28 @@
 	],
 	"homepage": "https://github.com/iCrawl/kaori#readme",
 	"dependencies": {
-		"fast-xml-parser": "^3.12.16",
+		"fast-xml-parser": "^3.12.19",
 		"node-fetch": "^2.6.0",
-		"yargs": "^13.2.4"
+		"yargs": "^13.3.0"
 	},
 	"devDependencies": {
-		"@types/jest": "^24.0.13",
-		"@types/node": "^12.0.2",
-		"@types/node-fetch": "^2.3.4",
-		"@types/yargs": "^13.0.0",
-		"@typescript-eslint/eslint-plugin": "^1.9.0",
-		"@typescript-eslint/parser": "^1.9.0",
-		"eslint": "^5.16.0",
-		"eslint-config-marine": "^2.2.0",
+		"@types/jest": "^24.0.17",
+		"@types/node": "^12.7.1",
+		"@types/node-fetch": "^2.5.0",
+		"@types/yargs": "^13.0.2",
+		"@typescript-eslint/eslint-plugin": "^1.13.0",
+		"@typescript-eslint/parser": "^1.13.0",
+		"eslint": "^6.1.0",
+		"eslint-config-marine": "^3.0.3",
 		"fs-nextra": "^0.4.5",
 		"gulp": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-typescript": "^5.0.1",
 		"jest": "^24.8.0",
-		"jest-extended": "^0.11.1",
-		"merge2": "^1.2.3",
+		"jest-extended": "^0.11.2",
+		"merge2": "^1.2.4",
 		"ts-jest": "^24.0.2",
-		"typescript": "^3.4.5"
+		"typescript": "^3.5.3"
 	},
 	"eslintConfig": {
 		"extends": "marine/node",
