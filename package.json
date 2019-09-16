@@ -47,7 +47,7 @@
 		"@typescript-eslint/eslint-plugin": "^1.13.0",
 		"@typescript-eslint/parser": "^1.13.0",
 		"eslint": "^6.1.0",
-		"eslint-config-marine": "^3.0.3",
+		"eslint-config-marine": "^5.0.0",
 		"fs-nextra": "^0.4.5",
 		"gulp": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",

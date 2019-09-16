@@ -1494,17 +1494,17 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-aqua@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-aqua/-/eslint-config-aqua-6.0.1.tgz#6337d812b558f19fc3113a80a9ba88a85c612dcc"
-  integrity sha512-Yxk5eOGopSoJaj61HU9w88rKs3MxQ1IAntFaA1Xp03xhKSaMSJ+U1sACGkj3uMX9C+VmPlrxOpMKAvgGoh0dOA==
+eslint-config-aqua@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-aqua/-/eslint-config-aqua-7.0.1.tgz#67f70d39f3d14b53b423dba50fd2b9f9a0dbec45"
+  integrity sha512-+wZY14nAsgcO+FDyHREWBHW4W13+E8X1jDvwFaLmDtjkrPqX7VneZMQC4QTP97WJQ0uYBqAImlZG+BNi4EHPDA==
 
-eslint-config-marine@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-marine/-/eslint-config-marine-3.0.3.tgz#ef7b32ff2e3cb8027f58df783d78ea0a6485cf27"
-  integrity sha512-+Cj+WzZnr738EyZMb/Do5EcmLK239q5a7/MVia5kPweBrxErMDjaYXn/nJOW2swu+DAY4fMZqfmG8LGRVQzknw==
+eslint-config-marine@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-marine/-/eslint-config-marine-5.0.0.tgz#1a20e9b4990d88eb03c0a2431e84374ac516d3a1"
+  integrity sha512-Lu/6jaPragO+c/jBzYYf1jjeDMHlCue1qkpufn5t5JsEBRmLuwcPRcAb91/jqmodYKfzLZcI6VVEIGGHUZ4/Zg==
   dependencies:
-    eslint-config-aqua "^6.0.1"
+    eslint-config-aqua "^7.0.1"
     eslint-plugin-promise "^4.2.1"
 
 eslint-plugin-promise@^4.2.1:
