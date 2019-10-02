@@ -1780,9 +1780,9 @@ fast-levenshtein@~2.0.4:
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
 fast-xml-parser@^3.12.19:
-  version "3.12.21"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.12.21.tgz#bb2425431fa47b6639412ec4818f23807e2117a0"
-  integrity sha512-iXB+idp+KYTZJwSfcdb0wbLSn5c7kMUrInn76AylwBtzZr+nBjuZcGc+/wNGyQkCEkQ4LkS1in+BToOvlXOrog==
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.13.0.tgz#3d46f517c0ac6c87393c6b6946808e9c799bb368"
+  integrity sha512-XYXC39VjE9dH6jpp5Gm5gsuR8Z4bMz44qMpT1PmqR+iyOJMhC0LcsN81asYkHP4OkEX8TTR8d6V/caCmy8Q8jQ==
 
 fb-watchman@^2.0.0:
   version "2.0.0"
