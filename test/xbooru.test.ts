@@ -19,6 +19,26 @@ test('fetching 1 random image from xbooru', async () => {
 	});
 });
 
+test('fetching 1 random image from xbooru with tags', async () => {
+	const s = await search('xbooru', { tags: ['cat'], random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
+test('fetching 1 random image from xbooru with excluded tags', async () => {
+	const s = await search('xbooru', { tags: ['cat'], exclude: ['maid'], random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
 test('fetching 10 images from xbooru', async () => {
 	const s = await search('xbooru', { limit: 10 });
 	s.map(image => {
@@ -34,5 +54,25 @@ test('fetching 10 random images from xbooru', async () => {
 		expect(image.id).toBeNumber();
 		expect(image.fileURL).toBeString();
 		expect(image.tags).toBeArray();
+	});
+});
+
+test('fetching 10 random images from xbooru with tags', async () => {
+	const s = await search('xbooru', { tags: ['cat'], limit: 10, random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
+test('fetching 10 random images from xbooru with excluded tags', async () => {
+	const s = await search('xbooru', { tags: ['cat'], exclude: ['maid'], limit: 10, random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
 	});
 });

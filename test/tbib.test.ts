@@ -21,6 +21,26 @@ test('fetching 1 random image from tbib', async () => {
 	});
 });
 
+test('fetching 1 random image from tbib with tags', async () => {
+	const s = await search('tbib', { tags: ['cat'], random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
+test('fetching 1 random image from tbib with excluded tags', async () => {
+	const s = await search('tbib', { tags: ['cat'], exclude: ['maid'], random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
 test('fetching 10 images from tbib', async () => {
 	const s = await search('tbib', { limit: 10 });
 	s.map(image => {
@@ -33,6 +53,26 @@ test('fetching 10 images from tbib', async () => {
 
 test('fetching 10 random images from tbib', async () => {
 	const s = await search('tbib', { limit: 10, random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
+test('fetching 10 random images from tbib with tags', async () => {
+	const s = await search('tbib', { tags: ['cat'], limit: 10, random: true });
+	s.map(image => {
+		expect(image.id).toBeNumber();
+		expect(image.fileURL).toBeString();
+		expect(image.tags).toBeArray();
+		expect(image.score).toBeNumber();
+	});
+});
+
+test('fetching 10 random images from tbib with excluded tags', async () => {
+	const s = await search('tbib', { tags: ['cat'], exclude: ['maid'], limit: 10, random: true });
 	s.map(image => {
 		expect(image.id).toBeNumber();
 		expect(image.fileURL).toBeString();
