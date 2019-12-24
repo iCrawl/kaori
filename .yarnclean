@@ -6,10 +6,8 @@ powered-test
 
 # asset directories
 docs
-doc
 website
 images
-assets
 
 # examples
 example
@@ -40,6 +38,3 @@ wercker.yml
 .documentup.json
 .yarn-metadata.json
 .travis.yml
-
-# misc
-*.md
