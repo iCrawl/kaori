@@ -4,6 +4,7 @@
 	"description": "Your friendly neighbourhood violinist bringing you the best booru images",
 	"main": "dist/index.js",
 	"bin": "dist/cli.js",
+	"typings": "typings/index.d.ts",
 	"author": "iCrawl <icrawltogo@gmail.com>",
 	"license": "MIT",
 	"scripts": {

@@ -12,10 +12,7 @@ export class Image {
 	public width: number;
 	public height: number;
 
-	protected data: any;
-	private site: string;
-
-	public constructor(data: any, site: string) {
+	public constructor(protected data: any, private readonly site: string) {
 		this.site = site;
 
 		this.id = data.id;
@@ -39,7 +36,8 @@ export class Image {
 		this.fileSize = data.file_size;
 
 		this.previewURL = data.preview_file_url || data.preview_url;
-		this.sampleURL = data.large_file_url ||
+		this.sampleURL =
+			data.large_file_url ||
 			(data.sample_url
 				? data.sample_url.match(/https?:\/\/lolibooru.moe/)
 					? data.sample_url.replace(/(.*).*(\/lolibooru).*(\..*)/, '$1$3')

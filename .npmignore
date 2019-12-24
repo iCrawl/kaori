@@ -23,4 +23,3 @@ gulpfile.js
 jest.config.js
 tsconfig.json
 src/
-dist/**/*.map
