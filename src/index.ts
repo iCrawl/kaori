@@ -62,6 +62,9 @@ export async function search(
 
 	try {
 		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${rngLimit ? rngLimit : limit}`, options);
+		const res2 = res.clone();
+		const text = await res2.text();
+		if (!text) throw new Error('Encountered empty response');
 		const json = await res.json();
 		if ('success' in json && !json.success) throw new Error(json.message);
 		let images: Image[] = json.map((image: any) => new Image(image, s));
