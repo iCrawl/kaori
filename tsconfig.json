@@ -18,7 +18,8 @@
 		"emitDecoratorMetadata": true,
 		"alwaysStrict": true,
 		"allowSyntheticDefaultImports": true,
-		"pretty": true
+		"pretty": true,
+		"outDir": "dist"
 	},
 	"include": [
 		"./src"

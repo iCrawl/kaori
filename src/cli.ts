@@ -10,5 +10,4 @@ yargs
 	.strict()
 	.alias('v', 'version')
 	.help('h')
-	.alias('h', 'help')
-	.argv;
+	.alias('h', 'help').argv;

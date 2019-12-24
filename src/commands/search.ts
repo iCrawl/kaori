@@ -9,27 +9,27 @@ export class SearchCommand implements CommandModule {
 	public builder(args: Argv): Argv {
 		return args
 			.option('t', {
-				'alias': 'tags',
-				'describe': 'The tags to search for',
-				'type': 'array',
-				'default': []
+				alias: 'tags',
+				describe: 'The tags to search for',
+				type: 'array',
+				default: [],
 			})
 			.option('e', {
-				'alias': 'exclude',
-				'describe': 'The tags to exclude',
-				'type': 'array',
-				'default': []
+				alias: 'exclude',
+				describe: 'The tags to exclude',
+				type: 'array',
+				default: [],
 			})
 			.option('l', {
-				'alias': 'limit',
-				'describe': 'The limit of images to return',
-				'type': 'number',
-				'default': 1
+				alias: 'limit',
+				describe: 'The limit of images to return',
+				type: 'number',
+				default: 1,
 			})
 			.option('r', {
 				alias: 'random',
 				describe: 'Whether or not to randomize the search',
-				type: 'boolean'
+				type: 'boolean',
 			});
 	}
 

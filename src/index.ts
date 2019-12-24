@@ -41,10 +41,14 @@ function shuffle<T>(array: T): T {
 	return array;
 }
 
-
 export async function search(
 	site: string,
-	{ tags = [], exclude = [], limit = 1, random = false }: SearchRequest = { tags: [], exclude: [], limit: 1, random: false }
+	{ tags = [], exclude = [], limit = 1, random = false }: SearchRequest = {
+		tags: [],
+		exclude: [],
+		limit: 1,
+		random: false,
+	},
 ): Promise<Image[]> {
 	if (!Array.isArray(tags)) throw new Error('Tags have to be an array.');
 	if (typeof limit !== 'number' && !Number.isNaN(limit)) throw new Error('Limit has to be a number.');
@@ -61,7 +65,10 @@ export async function search(
 	const options = { headers: { 'User-Agent': userAgent } };
 
 	try {
-		const res = await fetch(`https://${s}${endpoint}tags=${tags.join('+')}&limit=${rngLimit ? rngLimit : limit}`, options);
+		const res = await fetch(
+			`https://${s}${endpoint}tags=${tags.join('+')}&limit=${rngLimit ? rngLimit : limit}`,
+			options,
+		);
 		const res2 = res.clone();
 		const text = await res2.text();
 		if (!text) throw new Error('Encountered empty response');
