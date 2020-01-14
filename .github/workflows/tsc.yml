@@ -1,8 +1,8 @@
-name: Lint
+name: TSC
 on: [push, pull_request]
 jobs:
-  lint:
-    name: Lint
+  tsc:
+    name: TSC
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,5 +16,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run Lint
-        uses: icrawl/action-eslint@v1
+      - name: Run TSC
+        uses: icrawl/action-tsc@v1
