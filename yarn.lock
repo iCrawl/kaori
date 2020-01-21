@@ -2073,9 +2073,9 @@ jest-environment-node@^24.9.0:
     jest-util "^24.9.0"
 
 jest-extended@^0.11.2:
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/jest-extended/-/jest-extended-0.11.3.tgz#087f2624fd44c5daf5362f70f3e590ee93916fbd"
-  integrity sha512-pNTwYtHhURw4tKl6+619XJHdtWfWs94SFtbTIpDcwNz1E/HpPkYmQrfkt4LioLu3N7fwRWLmktRYQBMF5shEAQ==
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/jest-extended/-/jest-extended-0.11.4.tgz#81cf59204543259786d296fd8520759230118e8a"
+  integrity sha512-mBKsOc+0JKomG0RCFuDVpEaVfVvJ7As3xNCNRZY51a8fwPbFZpyp6UQktGX50cxzoSfv9i+QzozuCCZU8tzfKg==
   dependencies:
     expect "^24.1.0"
     jest-get-type "^22.4.3"
