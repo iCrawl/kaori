@@ -79,7 +79,7 @@ export async function search(
 			images = shuffle(images).slice(0, limit);
 		}
 		if (exclude.length) {
-			const left = images.filter(image => image.tags.every(tag => !exclude.includes(tag)));
+			const left = images.filter((image) => image.tags.every((tag) => !exclude.includes(tag)));
 			return left;
 		}
 		return images;
