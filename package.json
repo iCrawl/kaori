@@ -52,7 +52,7 @@
 		"eslint-config-marine": "^6.0.0",
 		"eslint-config-prettier": "^6.9.0",
 		"eslint-plugin-prettier": "^3.1.2",
-		"jest": "^25.1.0",
+		"jest": "^26.0.0",
 		"jest-extended": "^0.11.4",
 		"prettier": "^2.0.0",
 		"ts-jest": "^25.0.0",
