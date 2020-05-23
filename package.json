@@ -49,7 +49,7 @@
 		"@typescript-eslint/eslint-plugin": "^2.17.0",
 		"@typescript-eslint/parser": "^2.17.0",
 		"eslint": "^7.0.0",
-		"eslint-config-marine": "^6.0.0",
+		"eslint-config-marine": "^7.0.0",
 		"eslint-config-prettier": "^6.9.0",
 		"eslint-plugin-prettier": "^3.1.2",
 		"jest": "^26.0.0",

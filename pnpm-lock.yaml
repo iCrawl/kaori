@@ -10,7 +10,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 2.17.0_97af7094b3b5e0995017f58badfa9a40
   '@typescript-eslint/parser': 2.17.0_eslint@7.0.0+typescript@3.7.5
   eslint: 7.0.0
-  eslint-config-marine: 6.0.0_b20532202144b002fd1e79cffa01d3ac
+  eslint-config-marine: 7.0.0
   eslint-config-prettier: 6.9.0_eslint@7.0.0
   eslint-plugin-prettier: 3.1.2_eslint@7.0.0+prettier@2.0.0
   jest: 26.0.1
@@ -1459,55 +1459,18 @@ packages:
       source-map: 0.6.1
     resolution:
       integrity: sha512-Bmt7NcRySdIfNPfU2ZoXDrrXsG9ZjvDxcAlMfDUgRBjLOWTuIACXPBFJH7Z+cLb40JeQco5toikyc9t9P8E9SQ==
-  /eslint-config-aqua/7.2.1_b20532202144b002fd1e79cffa01d3ac:
-    dependencies:
-      eslint: 7.0.0
-      eslint-config-prettier: 6.9.0_eslint@7.0.0
-      eslint-plugin-prettier: 3.1.2_eslint@7.0.0+prettier@2.0.0
-      prettier: 2.0.0
+  /eslint-config-aqua/7.2.4:
     dev: true
     engines:
       node: '>=10'
-    peerDependencies:
-      babel-eslint: ^10.0.3
-      eslint: ^6.8.0
-      eslint-config-prettier: ^6.9.0
-      eslint-plugin-prettier: ^3.1.2
-      eslint-plugin-react: ^7.18.0
-      eslint-plugin-react-hooks: ^2.3.0
-      eslint-plugin-svelte3: ^2.7.3
-      eslint-plugin-vue: ^6.1.2
-      prettier: ^1.19.1
-    peerDependenciesMeta:
-      babel-eslint:
-        optional: true
-      eslint-config-prettier:
-        optional: true
-      eslint-plugin-prettier:
-        optional: true
-      eslint-plugin-react:
-        optional: true
-      eslint-plugin-react-hooks:
-        optional: true
-      eslint-plugin-svelte3:
-        optional: true
-      eslint-plugin-vue:
-        optional: true
-      prettier:
-        optional: true
     resolution:
-      integrity: sha512-GXRpVRoxD4qIriJ7/8+XCG5P04gtT/Yqwv1u0b6X8X5ue/JouFCpRWTnhktNVVrafeq7ObLbAJG99rbb3MsVww==
-  /eslint-config-marine/6.0.0_b20532202144b002fd1e79cffa01d3ac:
+      integrity: sha512-AfZdiyAkzeVQaPlpKPI2KGtyWH3ePs5fAOUwDYsT52OGAPyBid8Rotgkn/0JdRM/79MF3pOrXfOtcEjsMxhB3w==
+  /eslint-config-marine/7.0.0:
     dependencies:
-      eslint-config-aqua: 7.2.1_b20532202144b002fd1e79cffa01d3ac
+      eslint-config-aqua: 7.2.4
     dev: true
-    peerDependencies:
-      eslint: '*'
-      eslint-config-prettier: '*'
-      eslint-plugin-prettier: '*'
-      prettier: '*'
     resolution:
-      integrity: sha512-4735oFwmfMsXQY/MUKJ/N8EjCqHiLkAu9kbxOjdQCwJpWUeDpGwLUN5LL/c5DZQ/NaQVGfLvUM0gq4waj8UwAA==
+      integrity: sha512-sGMqu0qVTxeSuMzYlfyAA94VXpZsaHXLOhedwgFWPvr26H1thA9NnqcNeWFCq+vaIn7zBuWGj5MO9HLj0AxO7A==
   /eslint-config-prettier/6.9.0_eslint@7.0.0:
     dependencies:
       eslint: 7.0.0
@@ -4721,7 +4684,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^2.17.0
   '@typescript-eslint/parser': ^2.17.0
   eslint: ^7.0.0
-  eslint-config-marine: ^6.0.0
+  eslint-config-marine: ^7.0.0
   eslint-config-prettier: ^6.9.0
   eslint-plugin-prettier: ^3.1.2
   fast-xml-parser: ^3.16.0
