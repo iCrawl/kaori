@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { sites } from './sites';
 
-import { Image } from './Image';
+import { Image, ImageData } from './Image';
 
 const VERSION = 2;
 
@@ -34,8 +34,8 @@ function shuffle<T>(array: T): T {
 	if (!Array.isArray(array)) throw new TypeError(`Expected an Array, got ${typeof array} instead.`);
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
-		const tmp = array[i];
-		array[i] = array[j];
+		const tmp = array[i] as unknown;
+		array[i] = array[j] as unknown;
 		array[j] = tmp;
 	}
 	return array;
@@ -72,9 +72,8 @@ export async function search(
 		const res2 = res.clone();
 		const text = await res2.text();
 		if (!text) throw new Error('Encountered empty response');
-		const json = await res.json();
-		if ('success' in json && !json.success) throw new Error(json.message);
-		let images: Image[] = json.map((image: any) => new Image(image, s));
+		const json = (await res.json()) as ImageData[];
+		let images: Image[] = json.map((image) => new Image(image, s));
 		if (rngLimit) {
 			images = shuffle(images).slice(0, limit);
 		}
