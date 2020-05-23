@@ -8,11 +8,11 @@
 	"author": "iCrawl <icrawltogo@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"prebuild": "pnpm run lint",
+		"prebuild": "npm run lint",
 		"build": "tsc",
 		"lint": "eslint src --ext .ts",
 		"lint:fix": "eslint src --ext .ts --fix",
-		"pretest": "pnpm run lint",
+		"pretest": "npm run lint",
 		"test": "jest"
 	},
 	"repository": {
