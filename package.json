@@ -63,10 +63,5 @@
 		"env": {
 			"jest": true
 		}
-	},
-	"renovate": {
-		"extends": [
-			"teal"
-		]
 	}
 }
