@@ -62,6 +62,9 @@
 		"extends": "marine/prettier/node",
 		"env": {
 			"jest": true
+		},
+		"rules": {
+			"@typescript-eslint/naming-convention": 0
 		}
 	}
 }
