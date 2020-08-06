@@ -55,7 +55,7 @@ export const sites = {
 	},
 	'xbooru.com': {
 		aliases: ['xbooru'],
-		nsfw: false,
+		nsfw: true,
 		endpoint: '/index.php?page=dapi&s=post&q=index&json=1&',
 		random: false,
 	},
