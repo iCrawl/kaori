@@ -4,13 +4,7 @@
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"target": "es2017",
-		"lib": [
-			"esnext",
-			"esnext.array",
-			"esnext.asynciterable",
-			"esnext.intl",
-			"esnext.symbol"
-		],
+		"lib": ["ESNext"],
 		"declaration": true,
 		"sourceMap": false,
 		"removeComments": false,
@@ -22,7 +16,5 @@
 		"outDir": "dist",
 		"declarationDir": "typings"
 	},
-	"include": [
-		"./src"
-	]
+	"include": ["./src"]
 }
