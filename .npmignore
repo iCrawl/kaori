@@ -1,8 +1,9 @@
 # Packages
-node_modules/
+node_modules
+**/node_modules
 
 # Log files
-logs/
+logs
 *.log
 npm-debug.log*
 
@@ -16,10 +17,13 @@ test/
 
 # Miscellaneous
 .tmp/
+.github/
 .gitattributes
 .gitignore
-.yarnclean
-gulpfile.js
+.eslintrc.json
+.prettierc.json
+.npmignore
+.npmrc
 jest.config.js
 tsconfig.json
 src/

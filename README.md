@@ -1,4 +1,5 @@
 # Kaori
+
 > Your friendly neighbourhood violinist bringing you the best booru images
 
 <div align="center">
@@ -30,7 +31,7 @@ yarn add kaori
 import { search } from 'kaori';
 
 const images = await search('danbooru', { tags: ['cat'], limit: 1, random: true });
-images.map(image => {
+images.map((image) => {
 	console.log(image.fileURL);
 });
 ```
