@@ -59,4 +59,10 @@ export const sites = {
 		endpoint: '/index.php?page=dapi&s=post&q=index&json=1&',
 		random: false,
 	},
+	'realbooru.com': {
+		aliases: ['realbooru', 'rb'],
+		nsfw: true,
+		endpoint: '/index.php?page=dapi&s=post&q=index&json=1&',
+		random: false,
+	},
 };
