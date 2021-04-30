@@ -7,23 +7,3 @@ updates:
     time: "15:00"
     timezone: Europe/Vienna
   open-pull-requests-limit: 99
-  ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 15.0.0
-  - dependency-name: "@typescript-eslint/parser"
-    versions:
-    - 4.16.0
-    - 4.18.0
-  - dependency-name: eslint-config-marine
-    versions:
-    - 8.3.0
-  - dependency-name: "@typescript-eslint/eslint-plugin"
-    versions:
-    - 4.16.0
-  - dependency-name: eslint-config-prettier
-    versions:
-    - 8.0.0
-  - dependency-name: "@types/yargs"
-    versions:
-    - 16.0.0
