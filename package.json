@@ -39,7 +39,7 @@
 	"dependencies": {
 		"fast-xml-parser": "^3.17.5",
 		"node-fetch": "^2.6.1",
-		"yargs": "^16.2.0"
+		"yargs": "^17.0.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^26.0.19",
