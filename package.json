@@ -42,7 +42,7 @@
 		"yargs": "^16.2.0"
 	},
 	"devDependencies": {
-		"@types/jest": "^26.0.19",
+		"@types/jest": "^27.0.0",
 		"@types/node": "^16.0.0",
 		"@types/node-fetch": "^2.5.7",
 		"@types/yargs": "^15.0.12",
