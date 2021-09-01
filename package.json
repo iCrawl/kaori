@@ -38,7 +38,7 @@
 	"homepage": "https://github.com/iCrawl/kaori#readme",
 	"dependencies": {
 		"fast-xml-parser": "^3.17.5",
-		"node-fetch": "^2.6.1",
+		"node-fetch": "^3.0.0",
 		"yargs": "^16.2.0"
 	},
 	"devDependencies": {
