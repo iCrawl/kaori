@@ -3,7 +3,7 @@
 import * as yargs from 'yargs';
 import { SearchCommand } from './commands/search';
 
-yargs
+void yargs
 	.usage('Usage: $0 <command> [options]')
 	.command(new SearchCommand())
 	.recommendCommands()

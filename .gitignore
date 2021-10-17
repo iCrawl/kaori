@@ -17,3 +17,4 @@ pids
 dist
 typings
 .github/
+coverage

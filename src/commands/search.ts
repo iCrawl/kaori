@@ -1,6 +1,6 @@
-import { CommandModule, Argv, Arguments } from 'yargs';
+import type { CommandModule, Argv, Arguments } from 'yargs';
 import { search } from '../index';
-import { Image } from '../Image';
+import type { Image } from '../Image';
 
 export class SearchCommand implements CommandModule {
 	public command = 'search <site>';

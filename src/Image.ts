@@ -25,13 +25,13 @@ export interface ImageData {
 export class Image {
 	public id: number;
 	public tags: string[];
-	public createdAt?: Date;
+	public createdAt?: Date | undefined;
 	public source?: string;
 	public score: number;
 	public fileURL: string;
 	public fileSize?: number;
-	public previewURL?: string;
-	public sampleURL?: string;
+	public previewURL?: string | undefined;
+	public sampleURL?: string | undefined;
 	public rating: string;
 	public width: number;
 	public height: number;
