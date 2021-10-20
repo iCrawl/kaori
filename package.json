@@ -2,9 +2,10 @@
 	"name": "kaori",
 	"version": "2.0.5",
 	"description": "Your friendly neighbourhood violinist bringing you the best booru images",
-	"main": "dist/index.js",
-	"bin": "dist/cli.js",
-	"typings": "typings/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"bin": "./dist/cli.js",
+	"typings": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
