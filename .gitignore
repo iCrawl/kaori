@@ -14,7 +14,6 @@ pids
 
 # Miscellaneous
 .tmp/
-dist
-typings
-.github/
-coverage
+dist/
+typings/
+coverage/

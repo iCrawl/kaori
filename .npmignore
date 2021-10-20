@@ -27,3 +27,7 @@ test/
 jest.config.js
 tsconfig.json
 src/
+.versionrc
+tsup.config.js
+babel.config.js
+coverage/
